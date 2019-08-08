@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <!--继承模版 learning——logs下面的index-->
+    {%  extends "learning_logs/base.html" %}
+    {% block header %}
+        <div class="jumbotron">
+            <h1>学习之路</h1>
+        </div>
+    {% endblock header %}
+    <!--给父模版的预留空间增加内容-->
+    {% block content %}
+        <h2>
+            <a href="{% url 'users:register' %}">注册一个账户</a> 开始你的学习之路
+        </h2>
+        <h2>
+            当你学到新的主题的时候，你可以编辑他并给他添加内容
+        </h2>
+    {% endblock content %}
+</body>
+</html>
